@@ -8,7 +8,7 @@ public class Cuffie extends Prodotto {
 //Costruttore
 	public Cuffie(int codice, String nome, String marca, double prezzo, int iva, String colore,
 			String wirelessOrCablate) {
-		super(iva, colore, colore, prezzo, iva);
+		super(codice, nome, marca, prezzo, iva);
 		this.colore = colore;
 		this.wirelessOrCablate = wirelessOrCablate;
 	}
@@ -33,7 +33,7 @@ public class Cuffie extends Prodotto {
 //Metodo override
 	@Override
 	public String infoProdotto() {
-		return super.infoProdotto() + "\nColore: " + colore + "\nWireless o cablate: " + wirelessOrCablate;
+		return super.infoProdotto() + "\nColore: " + colore + "\nWireless o Cablate: " + wirelessOrCablate;
 	}
 
 }
