@@ -3,10 +3,10 @@ package jana60shop;
 public class Televisori extends Prodotto {
 //Attributi
 	private String dimensioni;
-	private boolean smart;
+	private String smart;
 
 //Costruttore
-	public Televisori(int codice, String nome, String marca, double prezzo, int iva) {
+	public Televisori(int codice, String nome, String marca, double prezzo, int iva, String dimensioni, String smart) {
 		super(codice, nome, marca, prezzo, iva);
 		this.dimensioni = dimensioni;
 		this.smart = smart;
@@ -21,12 +21,17 @@ public class Televisori extends Prodotto {
 		this.dimensioni = dimensioni;
 	}
 
-	public boolean isSmart() {
+	public String isSmart() {
 		return smart;
 	}
 
-	public void setSmart(boolean smart) {
+	public void setSmart(String smart) {
 		this.smart = smart;
 	}
 
+//Metodo override
+	@Override
+	public String infoProdotto() {
+		return super.infoProdotto() + "\nDimensioni: " + dimensioni + "\nProprietà Smart: " + smart;
+	}
 }

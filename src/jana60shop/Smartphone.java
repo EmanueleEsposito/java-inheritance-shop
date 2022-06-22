@@ -31,4 +31,10 @@ public class Smartphone extends Prodotto {
 		this.quantitaDiMemoria = quantitaDiMemoria;
 	}
 
+//Metodo override
+	@Override
+	public String infoProdotto() {
+		return super.infoProdotto() + "\nCodice IMEI: " + codiceIMEI + "\nQuantità di memoria: " + quantitaDiMemoria;
+	}
+
 }

@@ -3,14 +3,37 @@ package jana60shop;
 public class Cuffie extends Prodotto {
 //Attributi
 	private String colore;
-	private boolean wirelessOrCablate;
+	private String wirelessOrCablate;
 
 //Costruttore
 	public Cuffie(int codice, String nome, String marca, double prezzo, int iva, String colore,
-			boolean wirelessOrCablate) {
+			String wirelessOrCablate) {
 		super(iva, colore, colore, prezzo, iva);
 		this.colore = colore;
 		this.wirelessOrCablate = wirelessOrCablate;
+	}
+//Getter e setter
+
+	public String getColore() {
+		return colore;
+	}
+
+	public void setColore(String colore) {
+		this.colore = colore;
+	}
+
+	public String isWirelessOrCablate() {
+		return wirelessOrCablate;
+	}
+
+	public void setWirelessOrCablate(String wirelessOrCablate) {
+		this.wirelessOrCablate = wirelessOrCablate;
+	}
+
+//Metodo override
+	@Override
+	public String infoProdotto() {
+		return super.infoProdotto() + "\nColore: " + colore + "\nWireless o cablate: " + wirelessOrCablate;
 	}
 
 }
